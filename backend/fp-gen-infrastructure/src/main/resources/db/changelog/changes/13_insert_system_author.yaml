@@ -69,7 +69,7 @@ databaseChangeLog:
                   value: 'admin'
               - column:
                   name: trigram
-                  value: 'ADMIN'
+                  value: 'admin'
               - column:
                   name: organization
                   value: 'FPGEN'
@@ -94,7 +94,3 @@ databaseChangeLog:
               - column:
                   name: account_created
                   valueBoolean: 'true'
-              - column:
-                  name: administrator
-                  valueBoolean: 'true'
-

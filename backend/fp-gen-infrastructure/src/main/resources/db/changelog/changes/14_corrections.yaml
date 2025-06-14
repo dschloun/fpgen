@@ -49,7 +49,7 @@ databaseChangeLog:
 
   - changeSet:
       id: add_administrator_boolean
-      author: dsc
+      author: admin
       changes:
         - addColumn:
             tableName: author
@@ -64,4 +64,4 @@ databaseChangeLog:
               - column:
                   name: administrator
                   value: 'true'
-            where: trigram = 'dsc'
+            where: trigram = 'admin'
