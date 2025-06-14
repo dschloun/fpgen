@@ -43,14 +43,6 @@ databaseChangeLog:
                   value: 'HARASSMENT'
             where: type = 'TROLLING'
 
-        - update:
-            tableName: interlocutor
-            columns:
-              - column:
-                  name: type
-                  value: 'HARASSER'
-            where: type = 'TROLL'
-
         - renameColumn:
             tableName: statistic
             oldColumnName: troll_ratio
