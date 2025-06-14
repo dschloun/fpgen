@@ -2333,5 +2333,37 @@
   },
   "clientPolicies": {
     "policies": []
-  }
+  },
+  "users": [
+    {
+      "id": "cec17774-76ce-4cc4-9383-2a3798113466",
+      "createdTimestamp": "1743849521",
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "administrator",
+        "user"
+      ],
+      "clientRoles": {
+        "fpgen_app": [
+          "administrator",
+          "user"
+        ]
+      },
+      "requiredActions": [],
+      "attributes": {
+        "firstName": "admin",
+        "lastName": "admin",
+        "email": "admin@admin.be"
+      }
+    }
+  ]
 }

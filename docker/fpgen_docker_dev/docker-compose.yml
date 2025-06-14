@@ -1,40 +1,40 @@
 volumes:
-  db_data_anacarde:
+  db_fpgen:
     driver: local
-  keycloak_data_anacarde:
+  keycloak_data_fpgen:
     driver: local
 
 networks:
-  keycloak_network_anacarde:
+  keycloak_network_fpgen:
     driver: bridge
 
 services:
   postgresql:
     image: postgres:17.4
     volumes:
-      - db_data_anacarde:/var/lib/postgresql/data_anacarde
+      - db_fpgen:/var/lib/postgresql/data_fpgen
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     environment:
-      POSTGRES_DB: anacarde
-      POSTGRES_USER: anacarde
-      POSTGRES_PASSWORD: anacarde
+      POSTGRES_DB: fpgen
+      POSTGRES_USER: fpgen
+      POSTGRES_PASSWORD: fpgen
     ports:
       - 5432:5432
     networks:
-      - keycloak_network_anacarde
+      - keycloak_network_fpgen
 
-  keycloak_anacarde:
+  keycloak_fpgen:
     image: bitnami/keycloak:26.1.4
     volumes:
       - ./keycloak-import:/opt/bitnami/keycloak/data/import
       - ./keycloak-themes:/opt/bitnami/keycloak/themes
     environment:
-      KEYCLOAK_DATABASE_NAME: anacarde
-      KEYCLOAK_DATABASE_USER: anacarde
-      KEYCLOAK_DATABASE_PASSWORD: anacarde
+      KEYCLOAK_DATABASE_NAME: fpgen
+      KEYCLOAK_DATABASE_USER: fpgen
+      KEYCLOAK_DATABASE_PASSWORD: fpgen
       KEYCLOAK_DATABASE_SCHEMA: keycloak
       KEYCLOAK_HOSTNAME: localhost
-      KEYCLOAK_HOSTNAME_PORT: 7080
+      KEYCLOAK_HOSTNAME_PORT: 8080
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
       KEYCLOAK_LOG_LEVEL: info
@@ -42,7 +42,7 @@ services:
     depends_on:
       - postgresql
     ports:
-      - 7080:8080
+      - 8080:8080
       - 7443:7443
     networks:
-      - keycloak_network_anacarde
+      - keycloak_network_fpgen

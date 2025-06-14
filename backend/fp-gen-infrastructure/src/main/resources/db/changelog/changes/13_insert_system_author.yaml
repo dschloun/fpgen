@@ -49,3 +49,52 @@ databaseChangeLog:
                   name: account_created
                   valueBoolean: 'true'
 
+        - insert:
+            tableName: author
+            columns:
+              - column:
+                  name: id
+                  value: 'cec17774-76ce-4cc4-9383-2a3798113466'
+              - column:
+                  name: creation_date
+                  value: '2024-07-01 00:00:00'
+              - column:
+                  name: modification_date
+                  value: '2024-07-01 00:00:00'
+              - column:
+                  name: lastname
+                  value: 'admin'
+              - column:
+                  name: firstname
+                  value: 'admin'
+              - column:
+                  name: trigram
+                  value: 'ADMIN'
+              - column:
+                  name: organization
+                  value: 'FPGEN'
+              - column:
+                  name: function
+                  value: 'ADMINISTRATOR'
+              - column:
+                  name: email
+                  value: 'admin@admin.be'
+              - column:
+                  name: phone_number
+                  value: 'none'
+              - column:
+                  name: status
+                  value: 'VERIFIED'
+              - column:
+                  name: accept_terms_of_use
+                  valueBoolean: 'true'
+              - column:
+                  name: motivation
+                  value: 'the boss'
+              - column:
+                  name: account_created
+                  valueBoolean: 'true'
+              - column:
+                  name: administrator
+                  valueBoolean: 'true'
+
