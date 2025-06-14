@@ -27,6 +27,10 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 #------------------------------------------------------------------------
 # docker build -t fpgen/application/backend .
 
+# rename
+# docker tag fpgen/application/backend:latest fpgen/application:backend_1.0.0
+
+
 # push the image to the docker hub:
 #-----------------------------------
 # docker login
