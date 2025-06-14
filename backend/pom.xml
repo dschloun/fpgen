@@ -57,4 +57,17 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/UNamurCSFaculty/2425_IHDCM032_G03</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 </project>
