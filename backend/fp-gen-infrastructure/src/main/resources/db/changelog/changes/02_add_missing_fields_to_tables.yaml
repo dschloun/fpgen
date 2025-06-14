@@ -1,0 +1,174 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-function-column-to-dataset
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: dataset
+            columns:
+            - column:
+                name: function
+                type: varchar(20)
+                constraints:
+                  nullable: false
+                  unique: false
+
+  - changeSet:
+      id: increase-generation-id-limit
+      author: dsc
+      changes:
+        - modifyDataType:
+            tableName: generation
+            columnName: generation_id
+            newDataType: varchar(35)
+
+  - changeSet:
+      id: increase-generation-id-limit-bis
+      author: dsc
+      changes:
+        - modifyDataType:
+            tableName: generation
+            columnName: generation_id
+            newDataType: varchar(60)
+
+  - changeSet:
+      id: add-validated-field-to-dataset
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: dataset
+            columns:
+            - column:
+                name: validated
+                type: boolean
+                constraints:
+                  nullable: true
+                  unique: false
+        - update:
+            tableName: dataset
+            columns:
+            - column:
+                name: validated
+                value: 'false'
+        - addNotNullConstraint:
+            tableName: dataset
+            columnName: validated
+
+  - changeSet:
+      id: add-last-version-field-to-dataset
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: dataset
+            columns:
+              - column:
+                  name: last_version
+                  type: boolean
+                  constraints:
+                    nullable: true
+                    unique: false
+        - update:
+            tableName: dataset
+            columns:
+              - column:
+                  name: last_version
+                  value: 'true'
+        - addNotNullConstraint:
+            tableName: dataset
+            columnName: last_version
+
+  - changeSet:
+      id: add-original-dataset-id
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: dataset
+            columns:
+              - column:
+                  name: original_dataset_id
+                  type: uuid
+                  constraints:
+                    nullable: true
+                    unique: false
+
+  - changeSet:
+      id: add-order-message-number-in-conversation-message
+      author: dsc
+      changes:
+          - addColumn:
+              tableName: instant_message
+              columns:
+              - column:
+                  name: order_number
+                  type: int
+                  constraints:
+                      nullable: true
+                      unique: false
+
+  - changeSet:
+      id: add-prompt-version-to-ongoing-generation
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: ongoing_generation
+            columns:
+              - column:
+                  name: prompt_version
+                  type: int
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: dataset_id
+                  type: uuid
+                  constraints:
+                    nullable: true
+                    unique: false
+
+  - changeSet:
+      id: add-min-max-on-ongoing-generation
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: ongoing_generation
+            columns:
+              - column:
+                  name: min_interaction_number
+                  type: int
+                  constraints:
+                    nullable: true
+                    unique: false
+              - column:
+                  name: max_interaction_number
+                  type: int
+                  constraints:
+                    nullable: true
+                    unique: false
+
+  - changeSet:
+      id: add-hash-on-message
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: instant_message
+            columns:
+              - column:
+                  name: hash
+                  type: varchar(64)
+                  constraints:
+                    nullable: true
+                    unique: true
+
+  - changeSet:
+      id: add-hash-on-conversation
+      author: dsc
+      changes:
+        - addColumn:
+            tableName: conversation
+            columns:
+              - column:
+                  name: hash
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+                    unique: true
