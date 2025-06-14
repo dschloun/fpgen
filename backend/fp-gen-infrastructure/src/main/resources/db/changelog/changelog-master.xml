@@ -16,5 +16,6 @@
     <include file="changes/13_insert_system_author.yaml" relativeToChangelogFile="true"/>
     <include file="changes/14_corrections.yaml" relativeToChangelogFile="true"/>
     <include file="changes/15_insert_prompt.yaml" relativeToChangelogFile="true"/>
+    <include file="changes/16_insert_interlocutor.yaml" relativeToChangelogFile="true"/>
     <include file="changelog-quartz.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

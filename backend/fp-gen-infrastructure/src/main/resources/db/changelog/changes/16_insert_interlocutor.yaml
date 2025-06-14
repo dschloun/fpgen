@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-interlocutor-from-sql
+      author: dsc
+      changes:
+        - sqlFile:
+            path: db/sql/interlocutor.sql
+            encoding: UTF-8
+            relativeToChangelogFile: false
