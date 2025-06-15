@@ -25,7 +25,7 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 # build the image: use this script like that you gave a name to the image:
 #------------------------------------------------------------------------
-# docker build -t fpgen/application/backend .
+# docker build -t fpgen/application:backend_1.0.0 .
 
 # rename
 # docker tag fpgen/application/backend:latest fpgen/application:backend_1.0.0
