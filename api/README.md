@@ -22,6 +22,7 @@ If you want to add new endpoints or update the API, follow these steps carefully
 ### 1. Prepare the API Generator Project
 
 - Extract the **`api_generator`** project **outside** of the current project directory to avoid conflicts.
+- If you prefer, the api generator is also available on github: https://github.com/dschloun/api_gen
 
 ### 2. Update the API Contract
 
