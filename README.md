@@ -66,3 +66,5 @@ To get started:
 Feel free to explore each folder’s README for detailed guidance or reach out to the project maintainers for assistance.
 
 Happy coding! 👩‍💻👨‍💻
+
+Denis Schloune
