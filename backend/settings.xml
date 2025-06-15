@@ -2,8 +2,8 @@
   <servers>
     <server>
       <id>github</id>
-      <username>dschloun</username>
-      <password>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</password>
+      <username>your_username</username>
+      <password>your password</password>
     </server>
   </servers>
 </settings>
