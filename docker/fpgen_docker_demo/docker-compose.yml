@@ -56,7 +56,7 @@ services:
     networks:
       - keycloak_network_fpgen
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresql:5432/fpgen?currentSchema=fpgen
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresql:5432/fpgen?currentSchema=generation
       SPRING_DATASOURCE_USERNAME: fpgen
       SPRING_DATASOURCE_PASSWORD: fpgen
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
