@@ -65,7 +65,7 @@ services:
       APP_CORS_ALLOWED_ORIGINS: http://localhost:4200
 
       # Keycloak
-      KEYCLOAK_SERVER_URL: http://keycloak:8080
+      KEYCLOAK_AUTH_SERVER_URL: http://keycloak:8080
       KEYCLOAK_REALM: FPGEN
       KEYCLOAK_CLIENT_ID: fpgen_app
       KEYCLOAK_CLIENT_UUID: d67bfeb3-7b48-488f-a777-4cfc4eb457b9
