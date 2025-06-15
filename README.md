@@ -1,3 +1,8 @@
+# Disclaimer / Usage Responsible
+This project is intended solely for creating content aimed at advancing research in the detection of malicious individuals by training machine learning models.
+It must not be used to harm anyone or for any unlawful activities.
+Furthermore, this project should not serve as a source of inspiration for criminal behavior.
+
 # 🧬 FPGen – Project Overview
 
 Welcome to the **FPGen** project!  
@@ -64,6 +69,9 @@ To get started:
 ## 🙌 Need Help?
 
 Feel free to explore each folder’s README for detailed guidance or reach out to the project maintainers for assistance.
+
+## License
+This is a student project. A student license has been provided; please see the LICENSE file for details.
 
 Happy coding! 👩‍💻👨‍💻
 
