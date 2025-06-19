@@ -10,6 +10,10 @@ This global README provides a quick overview of the project structure and guides
 
 ---
 
+#  FPGen – Demo (video)
+Here a video link of the web application:
+https://youtu.be/o2ATlfShD_I
+
 ## 📁 Project Structure
 
 The project is organized into **4 main folders**, each with its own responsibilities and README for detailed instructions:
